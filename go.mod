@@ -1,0 +1,1 @@
+module "github.com/tech-botao/go-implement"
