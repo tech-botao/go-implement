@@ -79,6 +79,9 @@ func main() {
 	viper.BindPFlags(pflag.CommandLine)
 	pp.Println(viper.GetInt("mid"))
 
+	// Env优先, 如果有同名变量, 直接更新设定值
+	viper.AutomaticEnv()
+
 	// 输出另一个文件
 	err := viper.WriteConfigAs("./app/viper-config/out.json")
 	if err != nil {
