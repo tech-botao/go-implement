@@ -1,0 +1,19 @@
+foo: &foo
+  a: 1
+  b: 2
+  c: 3
+
+bar:
+  <<: *foo
+  c: "changed"
+  d: 4
+
+baz:
+  <<: &awesome
+    awesome: "cat"
+  great: "god"
+  bad: "human"
+
+status:
+  <<: *awesome
+  work: true
