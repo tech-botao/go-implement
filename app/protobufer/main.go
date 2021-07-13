@@ -22,7 +22,6 @@ func createPerson(name string, id int64, email string) *pb.Person {
 		Email: &email,
 		Phones: []*pb.Person_PhoneNumber{},
 		LastUpdated: timestamppb.Now(),
-		//LastUpdate:
 	}
 	return ph
 }
